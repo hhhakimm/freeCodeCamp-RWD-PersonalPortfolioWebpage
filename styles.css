@@ -57,17 +57,6 @@ body {
   z-index: 10;
 }
 
-.header-name {
-  font-family: var(--font-2);
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: var(--font-color);
-  position: absolute;
-  top: 3rem;
-  display: inline;
-  left: 4rem;
-}
-
 #welcome-section {
   height: 100vh;
   display: flex;
@@ -125,6 +114,10 @@ body {
   color: var(--font-color);
 }
 
+.project-tile:hover {
+  background-color: var(--color-4);
+}
+
 img {
   width: 100%;
 }
@@ -171,7 +164,52 @@ img {
   justify-content: space-evenly;
 }
 
-#contact>a {
+.contacts-container>a {
   color: var(--font-color);
   text-decoration: none;
+  position: absolute;
+}
+
+@keyframes contacts {
+  0% {
+    font-size: 1em;
+  }
+  10% {
+    font-size: 1.125em;
+  }
+  20% {
+    font-size: 1.150em;
+  }
+  30% {
+    font-size: 1.175em;
+  }
+  40% {
+    font-size: 1.20em;
+  }
+  50% {
+    font-size: 1.225em;
+  }
+  60% {
+    font-size: 1.175em;
+  }
+  70% {
+    font-size: 1.150em;
+  }
+  80% {
+    font-size: 1.125em;
+  }
+  90% {
+    font-size: 1.10em;
+  }
+  100% {
+    font-size: 1em;
+  }
+
+}
+
+#contact>.contacts-container>a:hover {
+  animation-name: contacts;
+  animation-duration: 500ms;
+  animation-iteration-count: unset;
+  animation-timing-function: linear;
 }
